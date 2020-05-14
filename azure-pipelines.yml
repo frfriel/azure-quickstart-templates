@@ -1,5 +1,5 @@
 # Starter pipeline
-task: AzureResourceManagerTemplateDeployment@3
+  task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'FrancisFriel_Enterprise_Sub(f9898b13-5baf-49c3-b71d-cbe29709a10c)'
