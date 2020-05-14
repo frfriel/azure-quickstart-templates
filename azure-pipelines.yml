@@ -1,4 +1,18 @@
 # Starter pipeline
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'FrancisFriel_Enterprise_Sub(f9898b13-5baf-49c3-b71d-cbe29709a10c)'
+    subscriptionId: 'f9898b13-5baf-49c3-b71d-cbe29709a10c'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'DevOpsDemo-RG'
+    location: 'Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.parameters.json'
+    deploymentMode: 'Validation'
+    deploymentName: 'testdeploy'
+    deploymentOutputs: 'testoutput'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
