@@ -1,5 +1,5 @@
 # Starter pipeline
-- task: AzureResourceManagerTemplateDeployment@3
+task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'FrancisFriel_Enterprise_Sub(f9898b13-5baf-49c3-b71d-cbe29709a10c)'
@@ -18,16 +18,16 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+master
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
+script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
+script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
